@@ -1,0 +1,20 @@
+{
+  "name": "patreon-api",
+  "version": "1.0.0",
+  "description": "A simple app displaying a grid of products and a lightbox when an image is clicked. Utilizes the giphy api.",
+  "main": "index.js",
+  "author": "Douglas Grogg",
+  "license": "MIT",
+  "dependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "html-webpack-plugin": "^2.29.0",
+    "mocha": "^3.4.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "scripts": {
+      "watch": "webpack --progress --watch",
+      "start": "webpack-dev-server",
+      "build": "webpack"
+  }
+}
