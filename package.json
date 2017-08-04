@@ -9,12 +9,15 @@
     "clean-webpack-plugin": "^0.1.16",
     "html-webpack-plugin": "^2.29.0",
     "mocha": "^3.4.2",
+    "node-sass": "^4.5.3",
+    "sass": "^1.0.0-beta.2",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   },
   "scripts": {
-      "watch": "webpack --progress --watch",
-      "start": "webpack-dev-server",
-      "build": "webpack"
+    "watch": "webpack --progress --watch",
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "sass": "node-sass ./src/scss/index.scss ./public/css/index.css"
   }
 }

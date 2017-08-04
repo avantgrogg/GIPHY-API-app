@@ -1,0 +1,47 @@
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#grid {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+}
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+    background: rgba(0,0,0,0.8);
+
+    &.show {
+        display: block;
+    }
+    
+    .contents {
+        background-color: white;
+        width: 60%;
+        height: 60%;
+        margin: auto;
+    }
+    
+    img {
+        /** Pad the lightbox image */
+        max-width: 90%;
+        max-height: 80%;
+        margin-top: 2%;
+    }
+}
