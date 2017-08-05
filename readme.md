@@ -1,4 +1,4 @@
-#Patreon Take-home Project
+# Patreon Take-home Project
 
 To build the project and run locally:
 
