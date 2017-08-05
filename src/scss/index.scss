@@ -1,22 +1,95 @@
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.mediumpurple {
+    color: mediumpurple;
+}
+
+.orange {
+    color: orange;
+}
 
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     padding: 0;
     margin: 0;
+    -webkit-overflow-scrolling: touch;
 }
 
-#grid {
-  display: flex;
+header {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+button {
+    color: white;
+    background-color: mediumpurple;
+    border:none;
+    border-radius: 5%;
+    cursor:pointer;
+}
+
+#grid-container{
+    text-align: center;
+    button {
+        margin-top: 2rem;
+        margin-bottom:2rem;
+    }
+}
+
+.grid {
+    column-count: 2;
+    column-gap: 0;
+    @media screen and (min-width: 667px) {
+        column-count: 4;
+    }
 }
 
 .column {
-  flex: 1;
+  break-inside: avoid;
+  padding: 5px;
+  img {
+      width: 100%;
+      cursor: pointer;
+  }
+}
+
+input, button {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+#search-form {
+    margin-bottom: 2rem;
+    input {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .lightbox {
 	/** Default lightbox to hidden */
 	display: none;
-
+    color: white;
 	/** Position and style */
 	position: fixed;
 	z-index: 999;
@@ -26,22 +99,78 @@ body {
 	top: 0;
 	left: 0;
     background: rgba(0,0,0,0.8);
-
+    font-size: 2rem;
     &.show {
         display: block;
     }
     
     .contents {
-        background-color: white;
-        width: 60%;
-        height: 60%;
+        background-color:black;
+        width: 100%;
+        height: 100%;
         margin: auto;
+        padding-top: 5%;
     }
     
+    h2 {
+        margin-top: 0;
+        font-size: 1rem;
+        @media screen and (min-width: 667px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .pagination {
+        cursor: pointer;
+    }
+
+    .previous-selected {
+        background-color:white;
+        padding:.5rem;
+        color: black;
+    }
+
+    .next-selected {
+        background-color: mediumpurple;
+        padding: 1rem;
+    }
+
     img {
         /** Pad the lightbox image */
         max-width: 90%;
-        max-height: 80%;
+        max-height: 60%;
         margin-top: 2%;
+        cursor: pointer;
     }
+
+    .close {
+        position:fixed;
+        color: white;
+        border: solid black .2rem;
+        font-size: 1rem;
+        top: .5rem;
+        right: .5rem;
+        @media screen and (min-width: 667px) {
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            background-color: initial;
+            cursor: pointer;
+            &:hover {
+                border: solid white .2rem;
+            }
+        }
+    }
+
+    p {
+        margin-top: 1rem;
+        font-size: 1rem;
+        @media screen and (min-width: 667px) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+#errors {
+    text-align: center;
 }

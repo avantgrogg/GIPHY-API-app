@@ -1,16 +1,24 @@
 <!DOCTYPE html>
     <head>
         <link rel="stylesheet" href="public/css/index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <form id="search-form">
-            <input type="text" placeholder="Enter a search term">
-            <button>Search</button>
-        </form>
-        <div id="grid">
-        </div>
-        <div id="selected-image">
-        </div>
+        <header>
+            <h1>Perform a <span class="red">G</span><span class="blue">I</span><span class="mediumpurple">P</span><span class="green">H</span><span class="orange">Y</span> Search</h1>
+        </header>
+        <main role="main">
+            <form id="search-form">
+                <input type="text" placeholder="Enter a search term">
+                <button>Search</button>
+            </form>
+            <div id="errors">
+            </div>
+            <div id="grid-container">
+            </div>
+            <div id="selected-image" role="dialog" aria-labelledby="lightbox-header">
+            </div>
+        </main>
         <footer>
             <script src="public/js/app.bundle.js"></script>
         </footer>

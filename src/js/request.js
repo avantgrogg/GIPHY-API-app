@@ -1,13 +1,21 @@
 import { api_key, protocol, host, path, myInit, resultLimit, defaultOffset } from './config';
-import { saveResponseAction } from './actions';
 
+/**
+ * Create a route with params for the request.
+ * @param {String} searchValue - The entered value to be requested against the giphy api
+ * @param {Array} offset - The offset to use when requesting results
+ */
 export function generateRequest(searchValue, offset) {
     return `${protocol}${host}${path}?api_key=${api_key}&limit=${resultLimit}&offset=${offset}&q=${searchValue}`;
 }
 
-export function performImgurSearch(searchValue, dispatch, offset = defaultOffset) {
+/**
+ * Based on searchValue and the config make a request for the searchValue
+* @param {String} searchValue - The entered value to be requested against the giphy api
+ * @param {Array} offset - The offset to use when requesting results
+ */
+export function performImgurSearch(searchValue, offset = defaultOffset) {
     const request = generateRequest(searchValue, offset);
-    fetch(request, myInit)
-      .then((response) => response.json())
-      .then((response) => dispatch(saveResponseAction(response)));
+    return fetch(request, myInit)
+            .then((response) => response.json())
 }
