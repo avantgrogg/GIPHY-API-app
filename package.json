@@ -20,9 +20,10 @@
   "scripts": {
     "watch": "webpack --progress --watch",
     "start": "webpack-dev-server",
-    "build": "webpack",
-    "sass": "node-sass -w ./src/scss/index.scss ./public/css/index.css",
-    "test": "ava"
+    "sass-watch": "node-sass -w ./src/scss/index.scss ./public/css/index.css",
+    "sass": "node-sass ./src/scss/index.scss ./public/css/index.css",
+    "test": "ava",
+    "build": "webpack && sass && start"
   },
   "ava": {
     "source": [
