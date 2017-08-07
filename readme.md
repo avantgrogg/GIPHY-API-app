@@ -1,4 +1,4 @@
-# Patreon Take-home Project
+# Giphy API
 
 To build the project and run locally:
 
