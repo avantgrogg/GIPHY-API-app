@@ -14,4 +14,4 @@ Then direct your browser to:
 
 Or to see the hosted version, go to:
 
-`http://dg-patreon-project.surge.sh/`
+`fortunate-bushes.surge.sh`
